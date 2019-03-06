@@ -6,7 +6,7 @@ services:
 
     mysql:
         image: mysql:5.7
-        command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --explicit_defaults_for_timestamp
+        command: ["mysqld", "--character-set-server=utf8", "--collation-server=utf8_unicode_ci", "--explicit_defaults_for_timestamp"]
         environment:
             - MYSQL_ROOT_PASSWORD=password
             - MYSQL_USER=airflow
